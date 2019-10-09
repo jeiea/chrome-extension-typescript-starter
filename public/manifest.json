@@ -1,8 +1,7 @@
 {
-  "manifest_version": 2,
-
   "name": "Chrome Extension TypeScript Starter",
   "description": "Chrome Extension, TypeScript, Visual Studio Code",
+  "manifest_version": 2,
   "version": "1.0",
 
   "options_ui": {
@@ -15,15 +14,13 @@
     "default_popup": "popup.html"
   },
 
-  "content_scripts": [
-      {
-          "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"]
-      }
-  ],
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["js/content_script.js"]
+  }],
 
   "background": {
-    "scripts": ["js/vendor.js", "js/background.js"]
+    "scripts": ["js/background.js"]
   },
 
   "permissions": [
